@@ -1,0 +1,226 @@
+[
+ {
+  "id": 1,
+  "categoria": "Transporte",
+  "titulo": "Bilhete Único para ônibus, metrô e trem",
+  "palavras_chave": [
+   "bilhete unico",
+   "cartao de onibus",
+   "bilhete"
+  ],
+  "resposta": "O Bilhete Único é o cartão usado para pagar o transporte coletivo e fazer integrações. Veja no site da SPTrans como pedir e recarregar.",
+  "documentos": [
+   "Documento com foto",
+   "CPF"
+  ],
+  "onde": "Site e canais da SPTrans",
+  "fonte": "https://www.sptrans.com.br",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 2,
+  "categoria": "Transporte",
+  "titulo": "Gratuidade no transporte para idosos",
+  "palavras_chave": [
+   "idoso",
+   "gratuidade",
+   "transporte gratuito",
+   "65 anos"
+  ],
+  "resposta": "Pessoas com 65 anos ou mais têm direito à gratuidade no transporte coletivo urbano (Estatuto da Pessoa Idosa). Confirme com a SPTrans como pedir o cartão de gratuidade.",
+  "documentos": [
+   "Documento com foto",
+   "Comprovante de idade"
+  ],
+  "onde": "Canais da SPTrans",
+  "fonte": "https://www.sptrans.com.br",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 3,
+  "categoria": "Transporte",
+  "titulo": "Redistribuição de ônibus entre regiões (simulação)",
+  "palavras_chave": [
+   "onibus lotado",
+   "falta de onibus",
+   "frota",
+   "redistribuicao"
+  ],
+  "resposta": "Simulação acadêmica com dados HIPOTÉTICOS: 72 ônibus distribuídos em Norte 12, Sul 20, Leste 16, Oeste 24 não atendem a demanda de pico. Redistribuindo para 14, 19, 18 e 21, sem comprar ônibus, todas as regiões passam a ter vaga para a demanda estimada. Não representa a frota real.",
+  "documentos": [
+   "Nenhum"
+  ],
+  "onde": "Prefeitura/empresa de transporte (dados reais da sua cidade)",
+  "fonte": "Simulação do projeto (modelagem), dados hipotéticos",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 4,
+  "categoria": "Saúde",
+  "titulo": "Fazer o Cartão Nacional de Saúde (Cartão SUS)",
+  "palavras_chave": [
+   "cartao sus",
+   "cartao do sus",
+   "sus",
+   "cns"
+  ],
+  "resposta": "Pode ser feito em uma UBS ou no app Meu SUS Digital.",
+  "documentos": [
+   "Documento com foto",
+   "CPF"
+  ],
+  "onde": "Qualquer UBS ou aplicativo Meu SUS Digital",
+  "fonte": "https://www.gov.br/saude",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 5,
+  "categoria": "Saúde",
+  "titulo": "Ver a caderneta de vacinação",
+  "palavras_chave": [
+   "vacina",
+   "vacinacao",
+   "caderneta de vacinacao",
+   "carteira de vacina"
+  ],
+  "resposta": "Sua caderneta pode ser consultada no app Meu SUS Digital. Para vacinar, procure uma UBS.",
+  "documentos": [
+   "Documento com foto",
+   "Cartão SUS ou CPF"
+  ],
+  "onde": "UBS ou aplicativo Meu SUS Digital",
+  "fonte": "https://www.gov.br/saude",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 6,
+  "categoria": "Documentos",
+  "titulo": "Consultar ou regularizar o CPF",
+  "palavras_chave": [
+   "cpf",
+   "regularizar cpf",
+   "consultar cpf"
+  ],
+  "resposta": "A inscrição e a consulta do CPF são feitas nos canais da Receita Federal. Desconfie de sites que cobram para isso.",
+  "documentos": [
+   "Documento com foto"
+  ],
+  "onde": "Site da Receita Federal",
+  "fonte": "https://www.gov.br/receitafederal",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 7,
+  "categoria": "Documentos",
+  "titulo": "Carteira de Trabalho Digital",
+  "palavras_chave": [
+   "carteira de trabalho",
+   "ctps",
+   "carteira digital",
+   "primeiro emprego"
+  ],
+  "resposta": "A Carteira de Trabalho Digital é acessada pelo app Carteira de Trabalho Digital ou pelo portal gov.br, com sua conta gov.br.",
+  "documentos": [
+   "CPF",
+   "Conta gov.br"
+  ],
+  "onde": "App Carteira de Trabalho Digital",
+  "fonte": "https://www.gov.br/trabalho-e-emprego",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 8,
+  "categoria": "Documentos",
+  "titulo": "Título de eleitor",
+  "palavras_chave": [
+   "titulo de eleitor",
+   "e-titulo",
+   "eleitor",
+   "votar"
+  ],
+  "resposta": "O serviço de título de eleitor e o aplicativo e-Título são oferecidos pela Justiça Eleitoral (TSE).",
+  "documentos": [
+   "Documento com foto"
+  ],
+  "onde": "Site do TSE ou cartório eleitoral",
+  "fonte": "https://www.tse.jus.br",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 9,
+  "categoria": "Consumidor",
+  "titulo": "Reclamar de uma compra que deu errado",
+  "palavras_chave": [
+   "compra errada",
+   "reclamar",
+   "procon",
+   "consumidor",
+   "produto com defeito"
+  ],
+  "resposta": "Guarde nota fiscal e conversas. Tente resolver com a empresa e, se não resolver, registre reclamação no Consumidor.gov.br ou no Procon.",
+  "documentos": [
+   "Nota fiscal ou comprovante",
+   "Prints/protocolos de atendimento"
+  ],
+  "onde": "Consumidor.gov.br ou Procon da sua cidade",
+  "fonte": "https://www.consumidor.gov.br",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 10,
+  "categoria": "Energia",
+  "titulo": "Tarifa Social de Energia Elétrica",
+  "palavras_chave": [
+   "tarifa social",
+   "desconto na conta de luz",
+   "cadunico",
+   "baixa renda"
+  ],
+  "resposta": "Famílias de baixa renda inscritas no CadÚnico (e outros casos previstos em lei) podem ter desconto na conta de luz. Pergunte à sua distribuidora e ao CRAS sobre as regras atuais.",
+  "documentos": [
+   "CPF",
+   "NIS/CadÚnico atualizado",
+   "Conta de luz"
+  ],
+  "onde": "Distribuidora de energia ou CRAS",
+  "fonte": "https://www.gov.br/aneel",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 11,
+  "categoria": "Energia",
+  "titulo": "Economizar energia no chuveiro elétrico",
+  "palavras_chave": [
+   "chuveiro",
+   "banho",
+   "conta de luz alta",
+   "economizar energia"
+  ],
+  "resposta": "O chuveiro é um dos maiores gastos de luz da casa. Reduzir o banho de 8 para 5 minutos pode economizar cerca de 33.0 kWh (R$ 29.70) por mês, sem custo. Valores são ESTIMATIVAS (família de 4 pessoas, tarifa e custos de exemplo); não são garantia de economia.",
+  "documentos": [
+   "Sua conta de luz (para ver a tarifa e o consumo)"
+  ],
+  "onde": "Em casa; consumo e tarifa na conta da sua distribuidora",
+  "fonte": "https://www.gov.br/aneel",
+  "verificado_em": "2026-11-18"
+ },
+ {
+  "id": 12,
+  "categoria": "Energia",
+  "titulo": "Aquecedor solar de água: vale a pena?",
+  "palavras_chave": [
+   "energia solar",
+   "aquecedor solar",
+   "placa solar",
+   "fonte renovavel"
+  ],
+  "resposta": "O aquecedor solar usa o sol para esquentar a água. Estimativa: cobre cerca de 70% do banho, economiza 61.6 kWh (R$ 55.44) por mês e se paga em cerca de 72.2 meses (investimento de exemplo R$ 4000). Banho curto + solar chega a R$ 64.35 por mês. Evita CO2, mas a rede elétrica do Brasil já é bastante limpa, então o ganho principal é financeiro. Peça orçamentos e veja se há espaço e sol no telhado. Valores são ESTIMATIVAS (família de 4 pessoas, tarifa e custos de exemplo); não são garantia de economia.",
+  "documentos": [
+   "Orçamentos de empresas",
+   "Comprovante de propriedade ou autorização do imóvel"
+  ],
+  "onde": "Empresas instaladoras (procure selo PROCEL/Inmetro)",
+  "fonte": "https://www.gov.br/mme",
+  "verificado_em": "2026-11-18"
+ }
+]

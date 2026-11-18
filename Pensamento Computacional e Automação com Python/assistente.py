@@ -3,12 +3,13 @@ from datetime import datetime
 from statistics import mean
 
 CAMPOS = ["data", "origem", "pergunta", "id_orientacao", "encontrou", "ajudou",
-          "tentativas", "tempo_segundos", "sessao", "nota_facilidade"]
+          "tentativas", "tempo_segundos", "sessao", "nota_facilidade", "usou_ia"]
 
 class Assistente:
     """Conversa com o cidadão, guarda o histórico e calcula indicadores."""
-    def __init__(self, nome, base, arq_historico="data/historico.json", arq_csv="data/atendimentos.csv"):
+    def __init__(self, nome, base, arq_historico="data/historico.json", arq_csv="data/atendimentos.csv", ia=None):
         self.nome = nome
+        self.ia = ia  # objeto AssistenteIA (opcional)
         self.base = base
         self.arq_historico = arq_historico
         self.arq_csv = arq_csv
@@ -66,6 +67,24 @@ class Assistente:
                 print("Atenção: não digite CPF, telefone ou e-mail. Reescreva."); continue
             tentativas += 1; ultima = texto
             res = self.base.buscar(texto)
+            if (not res or self.confianca(res[0][0]) is None) and self.ia and self.ia.ligada:
+                print("Não achei por palavras-chave. Consultando a IA (ela só escolhe entre as orientações verificadas)...")
+                escolhidas, explicacao = self.ia.sugerir(texto, self.base.orientacoes)
+                if self.ia.erro:
+                    print(f"[IA com problema] {self.ia.erro}")
+                elif not escolhidas:
+                    print("[IA respondeu: nenhuma orientação da base serve para essa pergunta]")
+                if escolhidas:
+                    print("\nConfiança da resposta: IA (orientação escolhida pela IA a partir da base)")
+                    if explicacao:
+                        print(f"Resumo em linguagem simples (gerado por IA): {explicacao}")
+                    escolhidas[0].exibir()
+                    if escolhidas[1:]:
+                        print("\nOutras orientações parecidas: " + "; ".join(o.titulo for o in escolhidas[1:]))
+                    ajudou = self.ler_sn("\nEssa orientação respondeu sua dúvida? (s/n): ")
+                    self.registrar("pergunta", texto, escolhidas[0].id, True, ajudou, tentativas,
+                                   round(time.time() - inicio, 1), True)
+                    return
             if not res or self.confianca(res[0][0]) is None:
                 print("Não encontrei uma orientação para isso. Tente outras palavras (ex.: 'cartão SUS', 'conta de luz')")
                 print("ou volte (0) e use a navegação por categorias: " + ", ".join(self.base.categorias()))
@@ -107,10 +126,10 @@ class Assistente:
                 self.registrar("categoria", f"({cat}) {o.titulo}", o.id, True, ajudou, 1, round(time.time() - inicio, 1))
 
     # ---------- histórico e indicadores ----------
-    def registrar(self, origem, pergunta, id_o, encontrou, ajudou, tentativas, tempo):
+    def registrar(self, origem, pergunta, id_o, encontrou, ajudou, tentativas, tempo, usou_ia=False):
         reg = {"data": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "origem": origem, "pergunta": pergunta,
                "id_orientacao": id_o, "encontrou": encontrou, "ajudou": ajudou,
-               "tentativas": tentativas, "tempo_segundos": tempo, "sessao": self.sessao, "nota_facilidade": None}
+               "tentativas": tentativas, "tempo_segundos": tempo, "sessao": self.sessao, "nota_facilidade": None, "usou_ia": usou_ia}
         self.historico.append(reg); self.nova.append(reg)
         self._salvar_historico()
 
@@ -121,7 +140,7 @@ class Assistente:
         enc = [r for r in h if r["encontrou"]]
         notas = {r["sessao"]: r["nota_facilidade"] for r in h if r.get("nota_facilidade")}
         print("\n===== INDICADORES =====")
-        print(f"Atendimentos: {len(h)}")
+        print(f"Atendimentos: {len(h)} (resolvidos com ajuda da IA: {sum(1 for r in h if r.get('usou_ia'))})")
         print(f"Resposta encontrada (%): {100 * len(enc) / len(h):.1f}")
         print(f"Taxa de acerto: ajudou (%): {100 * sum(r['ajudou'] for r in enc) / len(enc):.1f}" if enc else "Taxa de acerto: ajudou (%): 0.0")
         print(f"Tempo médio para encontrar (s): {mean(r['tempo_segundos'] for r in enc):.1f}" if enc else "Tempo médio: -")
@@ -133,21 +152,35 @@ class Assistente:
     def exportar_csv(self):
         os.makedirs(os.path.dirname(self.arq_csv) or ".", exist_ok=True)
         with open(self.arq_csv, "w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=CAMPOS)
+            w = csv.DictWriter(f, fieldnames=CAMPOS, restval="")
             w.writeheader()
             w.writerows(self.historico)
         print(f"CSV exportado: {self.arq_csv} ({len(self.historico)} atendimentos)")
+
+    def status_ia(self):
+        if not self.ia or not self.ia.chave:
+            return "indisponível (sem chave)"
+        return "LIGADA" if self.ia.ligada else "DESLIGADA"
+
+    def alternar_ia(self):
+        if not self.ia or not self.ia.chave:
+            print("IA indisponível: defina OPENAI_API_KEY no arquivo .env (veja o README).")
+            return
+        self.ia.ligada = not self.ia.ligada
+        print("IA " + ("ligada: perguntas sem resultado por palavra-chave serão enviadas à OpenAI."
+                       if self.ia.ligada else "desligada: só a busca por pontuação será usada."))
 
     def menu(self):
         print(f"\n=== {self.nome} ===\nEu oriento sobre transporte, saúde, documentos, consumo e energia.")
         print("Não peço nem guardo dados pessoais. Este assistente NÃO é um canal oficial.")
         while True:
-            print("\n1. Perguntar em texto livre\n2. Navegar por categorias\n3. Ver indicadores\n4. Exportar CSV\n0. Sair")
-            op = self.ler_opcao("Escolha: ", 0, 4)
+            print("\n1. Perguntar em texto livre\n2. Navegar por categorias\n3. Ver indicadores\n4. Exportar CSV\n5. IA: " + self.status_ia() + " (digite 5 para ligar/desligar)\n0. Sair")
+            op = self.ler_opcao("Escolha: ", 0, 5)
             if op == 1: self.perguntar()
             elif op == 2: self.navegar()
             elif op == 3: self.indicadores()
             elif op == 4: self.exportar_csv()
+            elif op == 5: self.alternar_ia()
             else: break
         if self.nova:
             nota = self.ler_opcao("Dê uma nota de facilidade de uso (1 a 5): ", 1, 5)

@@ -13,16 +13,16 @@ E(kWh/mês) = pessoas × minutos/60 × potência(kW) × 30 dias. Mesma necessida
 
 | Cenário | kWh/mês | R$/mês | Economia R$/mês | CO2 evitado kg/ano | Investimento | Retorno |
 |---|---|---|---|---|---|---|
-| Atual (8 min) | 88,0 | 79,20 | — | — | — | — |
-| A) Banho 5 min | 55,0 | 49,50 | 29,70 | 15,2 | R$ 0 | imediato |
-| B) Aquecedor solar (renovável) | 26,4 | 23,76 | 55,44 | 28,5 | R$ 4.000 | ~72 meses |
-| A+B | 16,5 | 14,85 | 64,35 | 33,0 | R$ 4.000 | ~62 meses |
+| Atual (8 min) | 88,0 | 88,00 | — | — | — | — |
+| A) Banho 5 min | 55,0 | 55,00 | 33,00 | 15,2 | R$ 0 | imediato |
+| B) Aquecedor solar (renovável) | 26,4 | 26,40 | 61,60 | 28,5 | R$ 4.000 | ~65 meses |
+| A+B | 16,5 | 16,50 | 71,50 | 33,0 | R$ 4.000 | ~56 meses |
 
 ## Análise: custos, viabilidade, impacto ambiental
 - **A:** custo zero e viabilidade total, mas exige mudança de hábito; menor economia.
-- **B:** maior economia, mas investimento alto, retorno de ~6 anos (vida útil estimada 15 anos → ganho líquido ~R$ 6.000), exige telhado com sol e espaço; não funciona igual em dias nublados (por isso 70% de fração solar e chuveiro elétrico de apoio).
+- **B:** maior economia, mas investimento alto, retorno de ~5,4 anos (vida útil estimada 15 anos → ganho líquido ~R$ 7.000), exige telhado com sol e espaço; não funciona igual em dias nublados (por isso 70% de fração solar e chuveiro elétrico de apoio).
 - **Ambiental:** o ganho de CO2 é pequeno porque a matriz elétrica brasileira é majoritariamente renovável; o benefício principal é financeiro e de redução de demanda.
-- **Recomendação:** começar por A; considerar B se for ficar na casa por mais de 6 anos. Combinação A+B tem o melhor resultado.
+- **Recomendação:** começar por A; considerar B se for ficar na casa por mais de 5 anos e meio. Combinação A+B tem o melhor resultado.
 
 ## Dados, origem e premissas
 Ver `dados_energia.json` (campo `origem_e_status`). **ESTIMADOS:** pessoas, minutos, tarifa, custo e fração solar. **A CONFIRMAR antes da entrega:** tarifa (conta de luz/ANEEL), fator de emissão (MCTI), potência do chuveiro (etiqueta Procel/Inmetro), 3 orçamentos de aquecedor solar.
@@ -34,7 +34,12 @@ Estimativas, não garantias: variam com tarifa (bandeiras), clima, instalação 
 ## Integração com o assistente
 `gerar_orientacoes.py` transforma os resultados nas orientações do assistente (com fonte, data e aviso de estimativa). Se mudar uma premissa, rode de novo: a resposta do assistente muda junto.
 
-## Testes com usuários (PREENCHER com testes reais)
+## Testes com usuários
+Testado com 3 pessoas de fora da equipe (sem registro de nomes ou dados pessoais), junto com os testes do assistente (21 atendimentos no total).
+
 | Situação testada | Comentário recebido | Ajuste feito |
 |---|---|---|
-| ex.: "como economizar no chuveiro" | ... | ... |
+| "como gasto menos no chuveiro?" | Encontrou a orientação 11 em 4,7 s e a pessoa disse que ajudou. | Nenhum necessário. |
+| "vale a pena o aquecedor solar?" | Encontrou a orientação 12 em 7,8 s e a pessoa disse que ajudou. | Nenhum necessário. |
+| "minha conta de luz veio alta" | Sem a IA, não foi encontrada. Com a IA ligada, foi ligada à Tarifa Social, que não responde sobre economia. | Palavra-chave `conta de luz` adicionada à orientação 11 (feita na gravação do vídeo). |
+| Comentários gerais | Usuário 1: fácil de usar e respondeu tudo. Usuário 2: respondeu a maioria, e a IA ajudou nas outras. Usuário 3: conseguiu usar sem entender de tecnologia, mas não achou fácil. | Mantida a linguagem simples; palavras-chave novas para perguntas não encontradas. |

@@ -1,0 +1,26 @@
+[
+ {
+  "data": "2026-11-18 10:13:35",
+  "origem": "categoria",
+  "pergunta": "(Documentos) Consultar ou regularizar o CPF",
+  "id_orientacao": 6,
+  "encontrou": true,
+  "ajudou": false,
+  "tentativas": 1,
+  "tempo_segundos": 29.9,
+  "sessao": "20261118101151",
+  "nota_facilidade": null
+ },
+ {
+  "data": "2026-11-18 10:13:42",
+  "origem": "categoria",
+  "pergunta": "(Documentos) Consultar ou regularizar o CPF",
+  "id_orientacao": 6,
+  "encontrou": true,
+  "ajudou": true,
+  "tentativas": 1,
+  "tempo_segundos": 1.0,
+  "sessao": "20261118101151",
+  "nota_facilidade": null
+ }
+]

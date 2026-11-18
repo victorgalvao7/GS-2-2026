@@ -1,0 +1,15 @@
+{
+ "premissas": {
+  "pessoas": 4, "potencia_chuveiro_w": 5500, "minutos_banho_atual": 8,
+  "minutos_banho_reduzido": 5, "dias_mes": 30, "tarifa_rs_kwh": 1.00,
+  "fracao_solar": 0.70, "custo_aquecedor_solar_rs": 4000, "vida_util_anos": 15,
+  "fator_emissao_kgco2_kwh": 0.0385
+ },
+ "origem_e_status": {
+  "pessoas, minutos_banho, dias_mes": "Valores adotados pela equipe: família de 4 pessoas, banho de 8 min e mês de 30 dias.",
+  "potencia_chuveiro_w": "Potência típica de chuveiro elétrico residencial (5500 W). Dado retirado da etiqueta do modelo.",
+  "tarifa_rs_kwh": "Valor estimado para a área da Enel SP.",
+  "fracao_solar, custo_aquecedor_solar_rs, vida_util_anos": "Valores aproximados de mercado.",
+  "fator_emissao_kgco2_kwh": "Fator médio do SIN divulgado pelo MCTI."
+ }
+} 

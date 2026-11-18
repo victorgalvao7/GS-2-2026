@@ -1,0 +1,42 @@
+{
+ "Atual (banho de 8 min)": {
+  "kwh_mes": 88.0,
+  "custo_mes_rs": 79.2,
+  "economia_kwh_mes": 0.0,
+  "economia_rs_mes": 0.0,
+  "co2_evitado_kg_ano": 0.0,
+  "investimento_rs": 0,
+  "retorno_meses": null,
+  "economia_liquida_vida_util_rs": null
+ },
+ "A) Banho de 5 min (sem custo)": {
+  "kwh_mes": 55.0,
+  "custo_mes_rs": 49.5,
+  "economia_kwh_mes": 33.0,
+  "economia_rs_mes": 29.7,
+  "co2_evitado_kg_ano": 15.2,
+  "investimento_rs": 0,
+  "retorno_meses": null,
+  "economia_liquida_vida_util_rs": null
+ },
+ "B) Aquecedor solar (renovável)": {
+  "kwh_mes": 26.4,
+  "custo_mes_rs": 23.76,
+  "economia_kwh_mes": 61.6,
+  "economia_rs_mes": 55.44,
+  "co2_evitado_kg_ano": 28.5,
+  "investimento_rs": 4000,
+  "retorno_meses": 72.2,
+  "economia_liquida_vida_util_rs": 5979.2
+ },
+ "A+B) Banho curto + solar": {
+  "kwh_mes": 16.5,
+  "custo_mes_rs": 14.85,
+  "economia_kwh_mes": 71.5,
+  "economia_rs_mes": 64.35,
+  "co2_evitado_kg_ano": 33.0,
+  "investimento_rs": 4000,
+  "retorno_meses": 62.2,
+  "economia_liquida_vida_util_rs": 7583.0
+ }
+}

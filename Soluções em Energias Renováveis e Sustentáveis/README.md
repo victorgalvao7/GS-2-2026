@@ -1,6 +1,6 @@
 # Energias Renováveis e Sustentáveis — contribuição ao Citizen Assist AI
-Integrantes: **[NOME - RM]**, **[NOME - RM]**, **[NOME - RM]** | Vídeo (máx. 3 min): **[LINK]**
-Repositório do assistente completo: **[]** (as orientações de energia estão na categoria "Energia", ids 11 e 12).
+Integrantes: **[Victor Vieira Galvão - 571483]**, **[Miguel Silverio de Avila - 568873]**, **[Artur Souza Pereira - 570880]** | Vídeo (máx. 3 min): **[LINK]**
+Repositório do assistente completo: **[https://github.com/victorgalvao7/GS-2-2026/tree/main/Pensamento%20Computacional%20e%20Automa%C3%A7%C3%A3o%20com%20Python]** (as orientações de energia estão na categoria "Energia", ids 11 e 12).
 
 ## Público e necessidade
 Moradores de casas com chuveiro elétrico que querem reduzir a conta de luz. O banho é um dos maiores consumos residenciais.

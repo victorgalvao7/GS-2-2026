@@ -20,3 +20,4 @@ data,origem,pergunta,id_orientacao,encontrou,ajudou,tentativas,tempo_segundos,se
 2026-11-18 11:49:51,pergunta,como gasto menos no chuveiro?,11,True,True,1,4.7,20261118114943,1,False
 2026-11-18 11:50:00,pergunta,vale a pena o aquecedor solar?,12,True,True,1,7.8,20261118114943,1,False
 2026-11-18 11:52:27,pergunta,comprei um produto com defeito aonde reclamo,9,True,True,5,47.2,20261118114943,1,False
+2026-11-18 13:42:21,pergunta,Como gasto menos no chuveiro?,11,True,True,1,76.8,20261118134044,5,False

@@ -271,5 +271,31 @@
   "sessao": "20261118114943",
   "nota_facilidade": 1,
   "usou_ia": false
+ },
+ {
+  "data": "2026-11-18 13:42:21",
+  "origem": "pergunta",
+  "pergunta": "Como gasto menos no chuveiro?",
+  "id_orientacao": 11,
+  "encontrou": true,
+  "ajudou": true,
+  "tentativas": 1,
+  "tempo_segundos": 76.8,
+  "sessao": "20261118134044",
+  "nota_facilidade": 5,
+  "usou_ia": false
+ },
+ {
+  "data": "2026-11-18 13:47:27",
+  "origem": "pergunta",
+  "pergunta": "Como gasto menos no chuveiro?",
+  "id_orientacao": 11,
+  "encontrou": true,
+  "ajudou": true,
+  "tentativas": 1,
+  "tempo_segundos": 25.5,
+  "sessao": "20261118134232",
+  "nota_facilidade": null,
+  "usou_ia": false
  }
 ]

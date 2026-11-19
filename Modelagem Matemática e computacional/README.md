@@ -1,6 +1,6 @@
 # Mobilidade Urbana Inteligente — Modelagem Matemática e Computacional (GS 2026.2)
-Integrantes: **[Victor Vieira Galvão - 571483]**, **[Miguel Silverio de Avila - 568873]**, **[Artur Souza Pereira - 570880]**
-Vídeo: **[LINK YOUTUBE]** | Executar: `pip install numpy` e `python frota.py`
+Integrantes: **Victor Vieira Galvão (RM 571483)**, **Miguel Silverio de Avila (RM 568873)** e **Artur Souza Pereira (RM 570880)**
+Como executar: `pip install numpy` e depois `python frota.py`
 
 ## Etapa 1 — Diagnóstico
 Variáveis: N, S, L, O = nº de ônibus em Norte, Sul, Leste, Oeste (inteiros ≥ 0).

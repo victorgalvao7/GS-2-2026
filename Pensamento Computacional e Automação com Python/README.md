@@ -1,6 +1,6 @@
 # Citizen Assist AI — Assistente Digital de Orientação ao Cidadão
 **Integrantes:** [Victor Vieira Galvão - 571483], [Miguel Silverio de Avila - 568873], [Artur Souza Pereira - 570880]
-**Vídeo técnico:** [LINK YOUTUBE] | **Outras disciplinas:** ver abaixo
+**Vídeo técnico:** [[LINK YOUTUBE](https://youtu.be/MXPuTdmol1U)] | **Outras disciplinas:** ver abaixo
 
 ## Público e problema
 Moradores de bairros periféricos de São Paulo que perdem tempo procurando orientações de **transporte, saúde, documentos, consumo e energia** em sites confusos ou falsos. O assistente responde só com a base verificada, mostra fonte, data e aviso, e não coleta dados pessoais.

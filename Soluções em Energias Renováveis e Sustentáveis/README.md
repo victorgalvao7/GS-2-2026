@@ -1,6 +1,6 @@
 # Energias Renováveis e Sustentáveis — contribuição ao Citizen Assist AI
 
-Integrantes: **Victor Vieira Galvão - 571483**, **Miguel Silverio de Avila - 568873**, **Artur Souza Pereira - 570880** | Vídeo (máx. 3 min): **[INSERIR LINK DO VÍDEO]**
+Integrantes: **Victor Vieira Galvão - 571483**, **Miguel Silverio de Avila - 568873**, **Artur Souza Pereira - 570880** | Vídeo (máx. 3 min): **[\[LINK DO VÍDEO\]](https://youtu.be/B_g2C736j9Y)**
 
 Repositório do assistente completo: **https://github.com/victorgalvao7/GS-2-2026/tree/main/Pensamento%20Computacional%20e%20Automa%C3%A7%C3%A3o%20com%20Python** (as orientações de energia estão na categoria "Energia", IDs 11 e 12).
 

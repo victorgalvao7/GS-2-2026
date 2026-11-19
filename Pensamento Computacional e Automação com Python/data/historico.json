@@ -297,5 +297,57 @@
   "sessao": "20261118134232",
   "nota_facilidade": null,
   "usou_ia": false
+ },
+ {
+  "data": "2026-11-19 18:04:16",
+  "origem": "pergunta",
+  "pergunta": "Como faço o cartão do SUS?",
+  "id_orientacao": 4,
+  "encontrou": true,
+  "ajudou": true,
+  "tentativas": 1,
+  "tempo_segundos": 56.8,
+  "sessao": "20261119175423",
+  "nota_facilidade": null,
+  "usou_ia": false
+ },
+ {
+  "data": "2026-11-19 18:04:45",
+  "origem": "pergunta",
+  "pergunta": "minha conta de luz veio alta",
+  "id_orientacao": null,
+  "encontrou": false,
+  "ajudou": false,
+  "tentativas": 1,
+  "tempo_segundos": 25.6,
+  "sessao": "20261119175423",
+  "nota_facilidade": null,
+  "usou_ia": false
+ },
+ {
+  "data": "2026-11-19 18:06:24",
+  "origem": "categoria",
+  "pergunta": "(Transporte) Gratuidade no transporte para idosos",
+  "id_orientacao": 2,
+  "encontrou": true,
+  "ajudou": true,
+  "tentativas": 1,
+  "tempo_segundos": 25.9,
+  "sessao": "20261119175423",
+  "nota_facilidade": null,
+  "usou_ia": false
+ },
+ {
+  "data": "2026-11-19 18:15:47",
+  "origem": "pergunta",
+  "pergunta": "minha conta de luz veio alta",
+  "id_orientacao": 11,
+  "encontrou": true,
+  "ajudou": true,
+  "tentativas": 1,
+  "tempo_segundos": 23.5,
+  "sessao": "20261119181520",
+  "nota_facilidade": null,
+  "usou_ia": false
  }
 ]
